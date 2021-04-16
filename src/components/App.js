@@ -4,9 +4,31 @@ import LineChart from "./LineChart";
 import Doughnut from "./Doughnut";
 import data from "../data";
 import Chart from "chart.js";
-
+import Sidebar from "react-sidebar";
+import SideBarContent from "./Sidebar"
 class App extends Component {
-  state = { feeds: data() };
+  // state = { feeds: data() ,sidebarOpen: true};
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      sidebarOpen: false,
+      feeds:data()
+    };
+    this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
+  }
+ 
+  onSetSidebarOpen(open) {
+    this.setState({ sidebarOpen: open });
+    var element = document.getElementById("main-charts")
+    if(element.style.marginLeft == "200px"){
+      element.style.marginLeft = "0px";
+    }
+    else{
+      element.style.marginLeft = "200px";
+    }
+    // document.getElementById("main-charts").style.marginLeft = "200px";
+  }
 
   componentDidMount() {
     Chart.defaults.global.defaultFontColor = "#FFFFFF6F";
@@ -15,19 +37,26 @@ class App extends Component {
         feeds: data(),
       });
   }
-  openNav(){
-    document.getElementById("mySidenav").style.width = "250px";
-  }
-  
-  closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-  }
 
   render() {
     return (
       <Fragment>
       <div className="app">
-        <h1 style={{fontSize:"30px;", cursor:"pointer"}}onclick="openNav()" >&#9776; open</h1>
+      {/* <div id="mySidenav">
+          <SideBar/>
+        <h1 style={{fontSize:"30px;", cursor:"pointer"}} onClick={this.openNav()} >&#9776; open</h1>
+        </div> */}
+        <Sidebar
+        sidebar={<SideBarContent/>}
+        open={this.state.sidebarOpen}
+        onSetOpen={this.onSetSidebarOpen}
+        styles={{ sidebar: { background: "LightGray", width:"200px" } }}
+      >
+        <button onClick={() => this.onSetSidebarOpen(true)}>
+        &#9776;
+        </button>
+      </Sidebar>
+      <div id="main-charts">
         <div className="main chart-wrapper">
           
           <LineChart
@@ -66,6 +95,7 @@ class App extends Component {
               ]}
             />
           </div>
+        </div>
         </div>
       </div>
       </Fragment>
