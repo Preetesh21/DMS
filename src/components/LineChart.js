@@ -1,8 +1,6 @@
-import React, { Component, createRef } from 'react';
+import React, { Component } from 'react';
 import Chart from 'chart.js';
-import { findAllByTitle } from '@testing-library/react';
-
-
+//import { findAllByTitle } from '@testing-library/react';
 class LineChart extends Component {
     constructor(){
         super();
