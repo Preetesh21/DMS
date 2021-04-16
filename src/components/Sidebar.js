@@ -1,28 +1,38 @@
-import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
-class SideBarContent extends Component{
-    render(){
-        return(
-           
-                <>
-                <h6>Menu</h6>
-                <Link to={{ pathname: '/' }}>
-                <h6>Home</h6>
-                </Link>
-                <Link to={{ pathname: '/form'}}>
-                <h6>Donate</h6>
-                </Link>
-                <Link to={{ pathname: '/transactions' }}>
-                <h6>Transactions</h6>
-                </Link>
-                <Link to={{ pathname: '/regression' }}>
-                <h6>Regression</h6>
-                </Link>
-                <Link to={{ pathname: '/about' }}>
-                <h6>About Us</h6>
-                </Link>
-            </>
-        );
-    }
-}
-export default SideBarContent;
+import React from 'react';
+import * as FaIcons from 'react-icons/fa';
+import * as AiIcons from 'react-icons/ai';
+import * as IoIcons from 'react-icons/io';
+
+export const SidebarData = [
+  {
+    title: 'Home',
+    path: '/',
+    icon: <AiIcons.AiFillHome />,
+    cName: 'nav-text'
+  },
+  {
+    title: 'Donate',
+    path: '/form',
+    icon: <IoIcons.IoIosPaper />,
+    cName: 'nav-text'
+  },
+  {
+    title: 'Records',
+    path: '/transactions',
+    icon: <FaIcons.FaMoneyCheckAlt />,
+    cName: 'nav-text'
+  },
+  {
+    title: 'Regression',
+    path: '/regression',
+    icon: <FaIcons.FaChartLine />,
+    cName: 'nav-text'
+  },
+  {
+    title: 'About',
+    path: '/about',
+    icon: <FaIcons.FaEnvelopeOpenText />,
+    cName: 'nav-text'
+  }
+];
+

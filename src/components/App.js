@@ -5,12 +5,14 @@ import Form from './Form';
 import Transactions from './Transactions';
 import About from './About';
 import Regression from './Regression';
+import Navbar from './Navbar';
 
 export class App extends Component {
     render() {
         return (
             <>
             <Router>
+            <Navbar />
             <Route exact path="/" component={Data}/>
             <Route exact path="/form" component={Form}/>
             <Route exact path="/transactions" component={Transactions}/>
