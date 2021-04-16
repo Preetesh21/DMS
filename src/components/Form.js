@@ -17,7 +17,7 @@ class Form extends React.Component {
   onSetSidebarOpen(open) {
     this.setState({ sidebarOpen: open });
     var element = document.getElementById("main-charts")
-    if(element.style.marginLeft == "200px"){
+    if(element.style.marginLeft === "200px"){
       element.style.marginLeft = "0px";
     }
     else{
@@ -31,7 +31,7 @@ class Form extends React.Component {
     let val = event.target.value;
     let err = '';
     if (nam === "age") {
-      if (val !="" && !Number(val)) {
+      if (val !=="" && !Number(val)) {
         err = <strong>Your donation must be a number</strong>;
       }
     }
@@ -41,6 +41,7 @@ class Form extends React.Component {
   render() {
     return (
       <Fragment>
+      <div className="app">
       <Sidebar
         sidebar={<SideBarContent/>}
         open={this.state.sidebarOpen}
@@ -68,6 +69,7 @@ class Form extends React.Component {
       <input type="submit" value="Submit"></input>
       {this.state.errormessage}
       </form>
+      </div>
       </div>
       </Fragment>
     );

@@ -4,21 +4,24 @@ class SideBarContent extends Component{
     render(){
         return(
            
-            <div>
-                <h3>Menu</h3>
+                <>
+                <h6>Menu</h6>
                 <Link to={{ pathname: '/' }}>
-                <h3>Home</h3>
+                <h6>Home</h6>
                 </Link>
                 <Link to={{ pathname: '/form'}}>
-                <h3>Donate</h3>
+                <h6>Donate</h6>
                 </Link>
-                <Link to={{ pathname: '/' }}>
-                <h3>Transactions</h3>
+                <Link to={{ pathname: '/transactions' }}>
+                <h6>Transactions</h6>
                 </Link>
-                <Link to={{ pathname: '/' }}>
-                <h3>About Us</h3>
+                <Link to={{ pathname: '/regression' }}>
+                <h6>Regression</h6>
                 </Link>
-            </div>
+                <Link to={{ pathname: '/about' }}>
+                <h6>About Us</h6>
+                </Link>
+            </>
         );
     }
 }

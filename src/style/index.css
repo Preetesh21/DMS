@@ -30,11 +30,6 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color: #45a049;
 }
-.hell{
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-}
 
 input[type=text], select {
   width: 100%;
@@ -107,3 +102,9 @@ a:hover, a:active {
 
 
 
+  .lineChartContainer {
+    height: 500px;
+    padding: 20px 5px;
+    background-color: black;
+  }
+  
