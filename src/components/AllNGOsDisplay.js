@@ -3,6 +3,7 @@ import logo1 from "../images/ngo2.png"
 import logo2 from "../images/ngo3.png"
 import logo3 from "../images/ngo4.jpeg"
 import logo4 from "../images/ngo1.jpeg"
+import { Redirect } from 'react-router-dom';
 
 const NGOS = [
     {"logo" : logo1, "name" : "Sanghamithra","desc" : "Sanghamitra Foundation focuses on CHILDREN & YOUTH EDUCATION HEALTH & NUTRITION and is headquartered in Kakinada, Andhra Pradesh, India."},
@@ -17,6 +18,9 @@ class AllNGOs extends React.Component{
 
     constructor(){
         super();
+    }
+    projectOpen(){
+        return <Redirect to='/projects' />;
     }
     render(){
         return(
@@ -35,7 +39,7 @@ class AllNGOs extends React.Component{
                             </div>
                             <div style={{margin:"10px"}}>
                                 <button class="btn btn-outline-success m-2">Donate</button>
-                                <button class="btn btn-outline-info m-2">Know More</button>
+                                <a href='/projects' class="btn btn-outline-info m-2">Know More</a>
                             </div>
                             </div>
                             </div>

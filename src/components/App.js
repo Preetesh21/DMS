@@ -9,6 +9,7 @@ import Navbar from './Navbar';
 import NGORegistrationForm from "./NGOregister"
 import NGOLoginForm from "./NGOlogin"
 import AllNGOs from "./AllNGOsDisplay"
+import NGOprojects from "./NGOprojects"
 export class App extends Component {
     render() {
         return (
@@ -23,6 +24,7 @@ export class App extends Component {
             <Route exact path="/register" component={NGORegistrationForm}/>
             <Route exact path="/login" component={NGOLoginForm}/>
             <Route exact path="/all" component={AllNGOs}/>
+            <Route exact path="/projects" component={NGOprojects}/>
             </Router>
             </>
         )
