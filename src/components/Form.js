@@ -32,11 +32,24 @@ class Form extends React.Component {
       
         <div className="container">
       <form>
-      <h1>Hello {this.state.username} {this.state.age}</h1>
+      <h1>Make a Donation</h1>
+      <h3 style={{color:"white"}}>{this.state.username}We thank you for your generous contribution of {this.state.age}</h3>
       <p>Enter your name:</p>
       <input
         type='text'
         name='username'
+        onChange={this.myChangeHandler}
+      />
+      <p>Enter your email:</p>
+      <input
+        type='email'
+        name='email'
+        onChange={this.myChangeHandler}
+      />
+      <p>Enter your mobile:</p>
+      <input
+        type='phone'
+        name='phone'
         onChange={this.myChangeHandler}
       />
       <p>Enter your Donation:</p>

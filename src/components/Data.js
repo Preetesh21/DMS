@@ -25,6 +25,7 @@ class Data extends Component {
     return (
       <Fragment>  
       <div className="app" id="main-charts">
+      <h1 style={{color:"white"}} className="text-center">Data Analysis</h1>
         <div className="main chart-wrapper">  
           <LineChart
             data={this.state.feeds[0].data}
