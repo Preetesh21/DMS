@@ -39,7 +39,7 @@ class AllNGOs extends React.Component{
                                 <p className="card-text" style={{color:"black"}}>{value["desc"]}</p>
                             </div>
                             <div style={{margin:"10px"}}>
-                                <button class="btn btn-outline-success m-2">Donate</button>
+                                <button class="btn btn-outline-success m-2"><a href='/form'>Donate</a></button>
                                 <a href='/projects' class="btn btn-outline-info m-2">Know More</a>
                             </div>
                             </div>

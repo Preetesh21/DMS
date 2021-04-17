@@ -20,18 +20,24 @@ class NGOprojects extends React.Component{
     render(){
         return(
             <Fragment>
+             <h1 className="text-center">The various projects undertaken by the NGO</h1>
+            <div className="container">
+           
                 <div class="row">
                 {NGOS.map((value,index)=>{
                     return (
-                        <div class="card col-md-3" style={{width: "18rem", marginLeft:"50px"}}>
+                        <div class="card col-md-3" style={{width: "20rem", marginLeft:"50px"}}>
                             <img src={value["logo"]} class="card-img" alt="..."/>
                             <div class="card-body">
                                 <h5 class="card-title">{value["name"]}</h5>
                                 <p style={{color:"black"}} class="card-text">{value["desc"]}</p>
                             </div>
+                            <button class="btn btn-outline-success m-2"><a href='/form'>Donate</a></button>
+                                
                         </div>
                     );
                     })}
+                </div>
                 </div>
             </Fragment>
         );
