@@ -17,21 +17,39 @@ export const SidebarData = [
     cName: 'nav-text'
   },
   {
-    title: 'Records',
+    title: 'Record',
     path: '/transactions',
     icon: <FaIcons.FaMoneyCheckAlt />,
     cName: 'nav-text'
   },
   {
-    title: 'Regression',
+    title: 'Regress',
     path: '/regression',
     icon: <FaIcons.FaChartLine />,
     cName: 'nav-text'
   },
   {
-    title: 'About',
-    path: '/about',
+    title: 'Data',
+    path: '/data',
     icon: <FaIcons.FaEnvelopeOpenText />,
+    cName: 'nav-text'
+  },
+  {
+    title: 'NGOs',
+    path: '/all',
+    icon: <FaIcons.FaEnvelopeOpenText />,
+    cName: 'nav-text'
+  },
+  {
+    title: 'Login',
+    path: '/login',
+    icon: <FaIcons.FaEnvelopeOpenText />,
+    cName: 'nav-text'
+  },
+  {
+    title: 'Register',
+    path: '/register',
+    icon: <FaIcons.FaRegIdBadge />,
     cName: 'nav-text'
   }
 ];

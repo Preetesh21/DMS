@@ -4,6 +4,7 @@
     display: flex;
     justify-content: start;
     align-items: center;
+    z-index: 1000;
   }
   
   .menu-bars {
@@ -14,7 +15,7 @@
 
   .nav-menu {
     background-color: #2e2e2e;
-    width: 250px;
+    width: 180px;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -32,13 +33,14 @@
   .nav-menu.active {
     left: 0;
     transition: 350ms;
+    z-index:100;
   }
   
   .nav-text {
     display: flex;
     justify-content: start;
     align-items: center;
-    padding: 8px 0px 8px 16px;
+    /* padding: 8px 0px 8px 16px; */
     list-style: none;
     height: 60px;
   }
@@ -73,5 +75,5 @@
   }
   
   span {
-    margin-left: 16px;
+    margin-left: 10px;
   }

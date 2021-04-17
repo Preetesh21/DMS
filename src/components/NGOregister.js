@@ -55,7 +55,7 @@ class NGORegistrationForm extends React.Component{
                         </div>
                     </div>
                     <div style={{backgroundColor:"skyblue"}}>
-                        <h5 style={{margin:"7px"}}>Want to make a donation? Login <a href="/all">here</a> as a visitor.</h5>
+                        <h5 style={{margin:"7px"}}>Want to make a donation? Visit <a href="/all">here</a> and make a contribution.</h5>
                     </div>
                 </div>
             </Fragment>
