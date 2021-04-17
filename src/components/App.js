@@ -15,10 +15,10 @@ export class App extends Component {
             <>
             <Router>
             <Navbar />
-            <Route exact path="/" component={Data}/>
+            <Route exact path="/" component={About}/>
             <Route exact path="/form" component={Form}/>
             <Route exact path="/transactions" component={Transactions}/>
-            <Route exact path="/about" component={About}/>
+            <Route exact path="/data" component={Data}/>
             <Route exact path="/regression" component={Regression}/>
             <Route exact path="/register" component={NGORegistrationForm}/>
             <Route exact path="/login" component={NGOLoginForm}/>
