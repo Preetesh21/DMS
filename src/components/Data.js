@@ -24,7 +24,7 @@ class Data extends Component {
   render() {
     return (
       <Fragment>  
-      <div id="main-charts">
+      <div className="app" id="main-charts">
         <div className="main chart-wrapper">  
           <LineChart
             data={this.state.feeds[0].data}

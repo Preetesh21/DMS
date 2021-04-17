@@ -6,7 +6,9 @@ import Transactions from './Transactions';
 import About from './About';
 import Regression from './Regression';
 import Navbar from './Navbar';
-
+import NGORegistrationForm from "./NGOregister"
+import NGOLoginForm from "./NGOlogin"
+import AllNGOs from "./AllNGOsDisplay"
 export class App extends Component {
     render() {
         return (
@@ -18,6 +20,9 @@ export class App extends Component {
             <Route exact path="/transactions" component={Transactions}/>
             <Route exact path="/about" component={About}/>
             <Route exact path="/regression" component={Regression}/>
+            <Route exact path="/register" component={NGORegistrationForm}/>
+            <Route exact path="/login" component={NGOLoginForm}/>
+            <Route exact path="/all" component={AllNGOs}/>
             </Router>
             </>
         )
